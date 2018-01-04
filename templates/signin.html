@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<br><br><br><br><br><br>
+<div class = "container">
+    <div class = "jumbotron">
+        <form method = "POST" action = "/signin/">
+            {% csrf_token %}
+        {{ form.as_p }}
+    <button type = "submit">submit</button>
+        </form>
+       <h6> <a id="link" href="/signup">Not a member? Click here to sign up!</a></h6>
+    </div>
+</div>
+
+{% endblock %}

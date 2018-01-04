@@ -1,0 +1,21 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<div class = "container">
+    <div class = "jumbotron">
+ <form method = "POST" action = "/signup/">
+     {% csrf_token %}
+        {{ form.as_p }}
+{#            <div class =form-group>#}
+{#                <label for = "username">username:</label>#}
+{#                <input type ="username" class = "form-control" name = "username" placeholder="Enter your username here">#}
+{#            </div>#}
+{#            <div class = form-group>#}
+{#            <label for = "password">password:</label>#}
+{#            <input type ="password" class = "form-control" name = "password" placeholder="Enter your password">#}
+{#            </div>#}
+    <button type = "submit">signup</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
